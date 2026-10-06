@@ -1,0 +1,4 @@
+<!-- UNITY CODE ASSIST INSTRUCTIONS START -->
+- Project name: NPC
+- Unity version: Unity 6000.5.1f1
+<!-- UNITY CODE ASSIST INSTRUCTIONS END -->

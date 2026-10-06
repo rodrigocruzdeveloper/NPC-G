@@ -110,7 +110,8 @@ public class PlayerControls : MonoBehaviour
 
 
     IEnumerator OnAttack()
-    {        
+    {
+        yield return new WaitForSeconds(0.3f);
         attackCollider.enabled = true;
         yield return new WaitForSeconds(1f);
         attackCollider.enabled = false;        
