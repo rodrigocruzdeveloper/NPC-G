@@ -63,14 +63,22 @@ public class EnemyBehaviour : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Hammer")
+        if (other.tag == "Hammer" || other.tag == "Player")
         {
+            if (other.tag == "Player")
+            {
+                Destroy(other.gameObject);
+            }
+
             StartCoroutine(Damage());
         }
+
     }
 
     IEnumerator Damage()
     {
+        GameObject.Find("SpawnEnemy").GetComponent<SpawnEnemy>().RemoveEnemy();
+
         damage = true;
 
         GetComponent<Collider2D>().enabled = false;

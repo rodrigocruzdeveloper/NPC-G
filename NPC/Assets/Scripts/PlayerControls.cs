@@ -80,7 +80,7 @@ public class PlayerControls : MonoBehaviour
 
     void Roll()
     {
-        rolling = Input.GetButtonDown("Jump");
+        rolling = Input.GetButtonDown("Jump") || Input.GetButtonDown("Fire2");
 
         if(rolling == true)
         {
